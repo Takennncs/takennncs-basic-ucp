@@ -1,0 +1,9 @@
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+    :root { --glass: rgba(255,255,255,0.04); }
+    body { font-family: Inter, ui-sans-serif, system-ui; }
+    .glass { background: var(--glass); backdrop-filter: blur(12px); }
+    .popout-enter { animation: popout 0.25s ease-out; }
+    @keyframes popout {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
