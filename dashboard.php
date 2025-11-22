@@ -85,11 +85,8 @@ require 'steamauth/userInfo.php';
         activeTab: 'info' // info | connections | data | history
     }" class="relative">
 
-<!-- Kasutaja menüü -->
 <div x-data="{ userMenuOpen: false }" class="relative">
-
-  <!-- Avamisnupp (avatar) -->
-  <button @click="userMenuOpen = true; $dispatch('close-others', 'user')" 
+<button @click="userMenuOpen = true; $dispatch('close-others', 'user')" 
           class="flex items-center gap-3 p-2 rounded-xl hover:bg-slate-800 transition-all duration-200 group">
     <img src="<?php echo htmlspecialchars($steamprofile['avatarfull']); ?>" 
          alt="Avatar" class="w-10 h-10 rounded-full ring-2 ring-slate-700 group-hover:ring-indigo-500 transition">
@@ -130,7 +127,6 @@ require 'steamauth/userInfo.php';
 
         <div class="pt-2 border-t border-slate-700"></div>
 
-        <!-- Logout nupp -->
         <form action="logout.php" method="POST">
           <button type="submit" 
                   class="w-full px-4 py-2 rounded-lg bg-rose-600 hover:bg-rose-500 text-white text-sm font-medium">
@@ -235,5 +231,6 @@ require 'steamauth/userInfo.php';
 
         </aside>
       </section>
+
 
 </html>
